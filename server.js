@@ -1,9 +1,13 @@
 import {ApolloServer, gql} from "apollo-server";
 
 const typeDefs = gql `
+    type Tweet {
+        id:ID
+        text:String
+    }
+
     type Query {
-        text: String
-        hello: String
+       allTweets:[Tweet]
     }
 `;
 
